@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+
         stage ('Build Docker Image') {
             steps {
                 script {
@@ -9,9 +10,7 @@ pipeline {
                 }
             }
         } 
-    }
 
-    stages {
         stage ('Push Docker Image') {
             steps {
                 script {
@@ -21,6 +20,7 @@ pipeline {
                     }
                 }
             }
-        } 
+        }
+         
     }
 }
